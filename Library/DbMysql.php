@@ -83,11 +83,11 @@ class DbMysql  {
         $regular = "/^select\ [\d\D]+\ +limit\ +\d+/i";
         $regularShow = "/^(show|explain|set) /i";
         if(!preg_match($regular,$sql) && !preg_match($regularShow, $sql)){
-            throw new Exception('miss limit',103);
-        }else{
             $regular = '/[\s\r\n]*(alter|create|update|delete|insert|drop|dump|sleep\(\d+\)|replace|kill)[\s\r\n]+/i';
             if(preg_match($regular,$sql)){
                 throw new Exception('there has some dangerous opration in your sql,please contact the administrator to exceute this sql',102);
+            }else{
+                throw new Exception('miss limit',103);
             }
         }
         //匹配每个select查询（包含子查询）,每个查询必须有limit
