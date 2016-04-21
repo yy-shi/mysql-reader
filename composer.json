@@ -1,0 +1,7 @@
+{
+    "name": "mysql-read/v1",
+    "require": {
+        "php": ">=5.5.0",
+        "ext-ldap": "*",
+    }
+}

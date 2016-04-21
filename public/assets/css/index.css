@@ -1,0 +1,21 @@
+
+.login-box{
+    width:500px;
+    margin:0 auto;
+    margin-top:17%;
+}
+
+.index-box{
+  padding-top:20px;
+}
+.result-title,.result-sql{width:95%; margin:0 auto; margin-bottom:10px;}
+.width200{
+    width:200px;
+}
+.result-main{width:100%;}
+.result-main thead tr{ background:#22a812;}
+.result-main tr>th:first-child{padding-left:30px;}
+.result-main tr>td:last-child{padding-left:30px;}
+.result-main tr>td:last-child{padding-right:30px;}
+.action-btns{margin-top:20px;}
+
