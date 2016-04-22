@@ -16,6 +16,6 @@ a simple mysql reader used in production env
 - config.php
 - cp .config-example.php config.php
 ## feuture
-- sql检测策略优化
-
+- sql检测策略持续优化
+- ldap登陆支持切换ou分组
 
