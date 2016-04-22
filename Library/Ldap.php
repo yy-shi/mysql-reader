@@ -23,7 +23,7 @@ class Ldap{
     }
 
     public function checkUser($user, $password){
-        $bind= ldap_bind($this->_ldap,'uid='.$user.','.$this->_loginDn.','.$this->_baseDn,$password);
+        $bind= @ldap_bind($this->_ldap,'uid='.$user.','.$this->_loginDn.','.$this->_baseDn,$password);
         if($bind)  
         {
             if($this->checkLimit($user)){

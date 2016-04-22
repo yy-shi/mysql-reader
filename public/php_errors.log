@@ -1,0 +1,436 @@
+[21-Apr-2016 11:19:12 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/vagrant/Code/mysql-read/Library/Auth.php on line 14
+[21-Apr-2016 11:19:12 UTC] PHP Stack trace:
+[21-Apr-2016 11:19:12 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:19:12 UTC] PHP   2. Auth->__construct() /home/vagrant/Code/mysql-read/public/index.php:55
+[21-Apr-2016 11:19:12 UTC] PHP   3. session_start() /home/vagrant/Code/mysql-read/Library/Auth.php:14
+[21-Apr-2016 11:33:29 UTC] PHP Fatal error:  Class 'Configer' not found in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 10
+[21-Apr-2016 11:33:29 UTC] PHP Stack trace:
+[21-Apr-2016 11:33:29 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:33:29 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:33:29 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:07 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:35:07 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:07 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:07 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:07 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:07 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:35:07 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:07 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:07 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:07 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:07 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:35:07 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:07 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:07 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:07 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:07 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:35:07 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:07 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:07 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:07 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:07 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:35:07 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:07 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:07 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:07 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:07 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:35:07 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:07 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:07 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:07 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:39 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:35:39 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:39 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:39 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:39 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:39 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:35:39 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:39 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:39 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:39 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:39 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:35:39 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:39 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:39 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:39 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:39 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:35:39 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:39 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:39 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:39 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:39 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:35:39 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:39 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:39 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:39 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:35:39 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:35:39 UTC] PHP Stack trace:
+[21-Apr-2016 11:35:39 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:35:39 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:59
+[21-Apr-2016 11:35:39 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:36:32 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:36:32 UTC] PHP Stack trace:
+[21-Apr-2016 11:36:32 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:36:32 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:36:32 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:36:32 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:36:32 UTC] PHP Stack trace:
+[21-Apr-2016 11:36:32 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:36:32 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:36:32 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:36:32 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:36:32 UTC] PHP Stack trace:
+[21-Apr-2016 11:36:32 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:36:32 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:36:32 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:36:32 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:36:32 UTC] PHP Stack trace:
+[21-Apr-2016 11:36:32 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:36:32 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:36:32 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:36:32 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:36:32 UTC] PHP Stack trace:
+[21-Apr-2016 11:36:32 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:36:32 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:36:32 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:36:32 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:36:32 UTC] PHP Stack trace:
+[21-Apr-2016 11:36:32 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:36:32 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:36:32 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:04 UTC] PHP Notice:  Undefined property: Configer::$ldap in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 10
+[21-Apr-2016 11:38:04 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:68
+[21-Apr-2016 11:38:04 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:04 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:38:04 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:68
+[21-Apr-2016 11:38:04 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:04 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:38:04 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:68
+[21-Apr-2016 11:38:04 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:04 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:38:04 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:68
+[21-Apr-2016 11:38:04 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:14 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:38:14 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:14 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:14 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:78
+[21-Apr-2016 11:38:14 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:14 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:38:14 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:14 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:14 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:78
+[21-Apr-2016 11:38:14 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:38:14 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:38:14 UTC] PHP Stack trace:
+[21-Apr-2016 11:38:14 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:38:14 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:78
+[21-Apr-2016 11:38:14 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:39:25 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Configer.php on line 9
+[21-Apr-2016 11:39:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:39:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:39:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:39:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:39:25 UTC] PHP   4. Configer::single() /home/vagrant/Code/mysql-read/Library/Ldap.php:10
+[21-Apr-2016 11:39:25 UTC] PHP   5. Configer->__construct() /home/vagrant/Code/mysql-read/Library/Configer.php:23
+[21-Apr-2016 11:39:25 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:39:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:39:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:39:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:39:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:39:25 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:39:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:39:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:39:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:39:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:39:25 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:39:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:39:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:39:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:39:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:40:25 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Configer.php on line 9
+[21-Apr-2016 11:40:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:40:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:40:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:40:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:40:25 UTC] PHP   4. Configer::single() /home/vagrant/Code/mysql-read/Library/Ldap.php:10
+[21-Apr-2016 11:40:25 UTC] PHP   5. Configer->__construct() /home/vagrant/Code/mysql-read/Library/Configer.php:23
+[21-Apr-2016 11:40:25 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:40:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:40:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:40:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:40:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:40:25 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:40:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:40:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:40:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:40:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:40:25 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:40:25 UTC] PHP Stack trace:
+[21-Apr-2016 11:40:25 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:40:25 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:40:25 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:47:48 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:47:48 UTC] PHP Stack trace:
+[21-Apr-2016 11:47:48 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:47:48 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:47:48 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:47:48 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 11
+[21-Apr-2016 11:47:48 UTC] PHP Stack trace:
+[21-Apr-2016 11:47:48 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:47:48 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:47:48 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:47:48 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:47:48 UTC] PHP Stack trace:
+[21-Apr-2016 11:47:48 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:47:48 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:47:48 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:47:48 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[21-Apr-2016 11:47:48 UTC] PHP Stack trace:
+[21-Apr-2016 11:47:48 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:47:48 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:47:48 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:47:48 UTC] PHP Notice:  Undefined variable: config in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:47:48 UTC] PHP Stack trace:
+[21-Apr-2016 11:47:48 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:47:48 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:47:48 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:47:48 UTC] PHP Notice:  Trying to get property of non-object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[21-Apr-2016 11:47:48 UTC] PHP Stack trace:
+[21-Apr-2016 11:47:48 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:47:48 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:47:48 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[21-Apr-2016 11:55:36 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[21-Apr-2016 11:55:36 UTC] PHP Stack trace:
+[21-Apr-2016 11:55:36 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:55:36 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:55:36 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:55:36 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[21-Apr-2016 11:56:20 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[21-Apr-2016 11:56:20 UTC] PHP Stack trace:
+[21-Apr-2016 11:56:20 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:56:20 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:56:20 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:56:20 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[21-Apr-2016 11:57:01 UTC] PHP Warning:  ldap_search(): Search: No such object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 28
+[21-Apr-2016 11:57:01 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:01 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:01 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:57:01 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:57:01 UTC] PHP   4. ldap_search() /home/vagrant/Code/mysql-read/Library/Ldap.php:28
+[21-Apr-2016 11:57:01 UTC] PHP Warning:  ldap_get_entries() expects parameter 2 to be resource, boolean given in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 29
+[21-Apr-2016 11:57:01 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:01 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:01 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:57:01 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:57:01 UTC] PHP   4. ldap_get_entries() /home/vagrant/Code/mysql-read/Library/Ldap.php:29
+[21-Apr-2016 11:57:01 UTC] PHP Warning:  current() expects parameter 1 to be array, null given in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 30
+[21-Apr-2016 11:57:01 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:01 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:01 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:57:01 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:57:01 UTC] PHP   4. current() /home/vagrant/Code/mysql-read/Library/Ldap.php:30
+[21-Apr-2016 11:57:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vagrant/Code/mysql-read/Library/Ldap.php:30) in /home/vagrant/Code/mysql-read/Library/Func.php on line 21
+[21-Apr-2016 11:57:01 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:01 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:01 UTC] PHP   2. redirect() /home/vagrant/Code/mysql-read/public/index.php:60
+[21-Apr-2016 11:57:01 UTC] PHP   3. header() /home/vagrant/Code/mysql-read/Library/Func.php:21
+[21-Apr-2016 11:57:49 UTC] PHP Warning:  ldap_search(): Search: No such object in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 28
+[21-Apr-2016 11:57:49 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:49 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:49 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:57:49 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:57:49 UTC] PHP   4. ldap_search() /home/vagrant/Code/mysql-read/Library/Ldap.php:28
+[21-Apr-2016 11:57:49 UTC] PHP Warning:  ldap_get_entries() expects parameter 2 to be resource, boolean given in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 29
+[21-Apr-2016 11:57:49 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:49 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:49 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:57:49 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:57:49 UTC] PHP   4. ldap_get_entries() /home/vagrant/Code/mysql-read/Library/Ldap.php:29
+[21-Apr-2016 11:57:49 UTC] PHP Warning:  current() expects parameter 1 to be array, null given in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 30
+[21-Apr-2016 11:57:49 UTC] PHP Stack trace:
+[21-Apr-2016 11:57:49 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:57:49 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:57:49 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:57:49 UTC] PHP   4. current() /home/vagrant/Code/mysql-read/Library/Ldap.php:30
+[21-Apr-2016 11:58:41 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[21-Apr-2016 11:58:41 UTC] PHP Stack trace:
+[21-Apr-2016 11:58:41 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 11:58:41 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 11:58:41 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 11:58:41 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[21-Apr-2016 12:00:29 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[21-Apr-2016 12:00:29 UTC] PHP Stack trace:
+[21-Apr-2016 12:00:29 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 12:00:29 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 12:00:29 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 12:00:29 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[21-Apr-2016 12:00:43 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[21-Apr-2016 12:00:43 UTC] PHP Stack trace:
+[21-Apr-2016 12:00:43 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 12:00:43 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 12:00:43 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 12:00:43 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[21-Apr-2016 12:01:47 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[21-Apr-2016 12:01:47 UTC] PHP Stack trace:
+[21-Apr-2016 12:01:47 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[21-Apr-2016 12:01:47 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[21-Apr-2016 12:01:47 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[21-Apr-2016 12:01:47 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[22-Apr-2016 02:30:04 UTC] PHP Parse error:  syntax error, unexpected 'checkLimit' (T_STRING), expecting variable (T_VARIABLE) in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 43
+[22-Apr-2016 02:30:04 UTC] PHP Stack trace:
+[22-Apr-2016 02:30:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:30:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:30:04 UTC] PHP   3. spl_autoload_call() /home/vagrant/Code/mysql-read/public/index.php:39
+[22-Apr-2016 02:30:04 UTC] PHP   4. {closure:/home/vagrant/Code/mysql-read/public/index.php:6-13}() /home/vagrant/Code/mysql-read/public/index.php:39
+[22-Apr-2016 02:30:24 UTC] PHP Notice:  Undefined property: stdClass::$baseDn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 12
+[22-Apr-2016 02:30:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:30:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:30:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:30:24 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[22-Apr-2016 02:30:24 UTC] PHP Notice:  Undefined property: stdClass::$searchDn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 15
+[22-Apr-2016 02:30:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:30:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:30:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:30:24 UTC] PHP   3. Ldap->__construct() /home/vagrant/Code/mysql-read/Library/Auth.php:39
+[22-Apr-2016 02:30:24 UTC] PHP Notice:  Undefined property: Ldap::$_basedn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:30:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:30:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:30:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:30:24 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:30:24 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid DN syntax in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:30:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:30:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:30:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:30:24 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:30:24 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[22-Apr-2016 02:30:24 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vagrant/Code/mysql-read/Library/Ldap.php:23) in /home/vagrant/Code/mysql-read/Library/Func.php on line 21
+[22-Apr-2016 02:30:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:30:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:30:24 UTC] PHP   2. redirect() /home/vagrant/Code/mysql-read/public/index.php:62
+[22-Apr-2016 02:30:24 UTC] PHP   3. header() /home/vagrant/Code/mysql-read/Library/Func.php:21
+[22-Apr-2016 02:31:04 UTC] PHP Notice:  Undefined property: Ldap::$_basedn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:04 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:04 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:04 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid DN syntax in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:04 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:04 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:04 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:04 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:04 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[22-Apr-2016 02:31:08 UTC] PHP Notice:  Undefined property: Ldap::$_basedn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:08 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:08 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:08 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:08 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:08 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid DN syntax in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:08 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:08 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:08 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:08 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:08 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[22-Apr-2016 02:31:17 UTC] PHP Notice:  Undefined property: Ldap::$_basedn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:17 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:17 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:17 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:17 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:17 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid DN syntax in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:17 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:17 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:17 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:17 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:17 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[22-Apr-2016 02:31:45 UTC] PHP Notice:  Undefined property: Ldap::$_basedn in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:45 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:45 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:45 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:45 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:45 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid DN syntax in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 23
+[22-Apr-2016 02:31:45 UTC] PHP Stack trace:
+[22-Apr-2016 02:31:45 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:31:45 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:31:45 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:31:45 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:23
+[22-Apr-2016 02:32:11 UTC] PHP Notice:  Undefined variable: uid in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 26
+[22-Apr-2016 02:32:11 UTC] PHP Stack trace:
+[22-Apr-2016 02:32:11 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:32:11 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:32:11 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:32:11 UTC] PHP Notice:  Undefined variable: user in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 44
+[22-Apr-2016 02:32:11 UTC] PHP Stack trace:
+[22-Apr-2016 02:32:11 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:32:11 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:32:11 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:32:11 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:26
+[22-Apr-2016 02:32:24 UTC] PHP Notice:  Undefined variable: user in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 44
+[22-Apr-2016 02:32:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:32:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:32:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:32:24 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:32:24 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:26
+[22-Apr-2016 02:38:05 UTC] PHP Warning:  ldap_search(): Search: Protocol error in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 44
+[22-Apr-2016 02:38:05 UTC] PHP Stack trace:
+[22-Apr-2016 02:38:05 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:38:05 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:38:05 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:38:05 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:26
+[22-Apr-2016 02:38:05 UTC] PHP   5. ldap_search() /home/vagrant/Code/mysql-read/Library/Ldap.php:44
+[22-Apr-2016 02:38:05 UTC] PHP Warning:  ldap_get_entries() expects parameter 2 to be resource, boolean given in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 45
+[22-Apr-2016 02:38:05 UTC] PHP Stack trace:
+[22-Apr-2016 02:38:05 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:38:05 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:38:05 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:38:05 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:26
+[22-Apr-2016 02:38:05 UTC] PHP   5. ldap_get_entries() /home/vagrant/Code/mysql-read/Library/Ldap.php:45
+[22-Apr-2016 02:38:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 46
+[22-Apr-2016 02:38:05 UTC] PHP Stack trace:
+[22-Apr-2016 02:38:05 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:38:05 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:38:05 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:38:05 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:26
+[22-Apr-2016 02:47:24 UTC] PHP Notice:  Undefined index: member in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 52
+[22-Apr-2016 02:47:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:47:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:47:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:47:24 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:47:24 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:29
+[22-Apr-2016 02:47:24 UTC] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 52
+[22-Apr-2016 02:47:24 UTC] PHP Stack trace:
+[22-Apr-2016 02:47:24 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:47:24 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:47:24 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 02:47:24 UTC] PHP   4. Ldap->checkLimit() /home/vagrant/Code/mysql-read/Library/Ldap.php:29
+[22-Apr-2016 02:47:24 UTC] PHP   5. in_array() /home/vagrant/Code/mysql-read/Library/Ldap.php:52
+[22-Apr-2016 02:47:37 UTC] PHP Notice:  Undefined index: userName in /home/vagrant/Code/mysql-read/Library/Auth.php on line 29
+[22-Apr-2016 02:47:37 UTC] PHP Stack trace:
+[22-Apr-2016 02:47:37 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 02:47:37 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:58
+[22-Apr-2016 02:47:37 UTC] PHP   3. Auth->setData() /home/vagrant/Code/mysql-read/Library/Auth.php:44
+[22-Apr-2016 03:01:52 UTC] PHP Warning:  preg_match(): No ending delimiter '/' found in /home/vagrant/Code/mysql-read/Library/DbMysql.php on line 96
+[22-Apr-2016 03:01:52 UTC] PHP Stack trace:
+[22-Apr-2016 03:01:52 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 03:01:52 UTC] PHP   2. DbMysql->queryMany() /home/vagrant/Code/mysql-read/public/index.php:91
+[22-Apr-2016 03:01:52 UTC] PHP   3. DbMysql->query() /home/vagrant/Code/mysql-read/Library/DbMysql.php:78
+[22-Apr-2016 03:01:52 UTC] PHP   4. DbMysql->checkSql() /home/vagrant/Code/mysql-read/Library/DbMysql.php:51
+[22-Apr-2016 03:01:52 UTC] PHP   5. preg_match() /home/vagrant/Code/mysql-read/Library/DbMysql.php:96
+[22-Apr-2016 08:37:41 UTC] PHP Warning:  ldap_bind(): Unable to bind to server: Invalid credentials in /home/vagrant/Code/mysql-read/Library/Ldap.php on line 26
+[22-Apr-2016 08:37:41 UTC] PHP Stack trace:
+[22-Apr-2016 08:37:41 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 08:37:41 UTC] PHP   2. Auth->login() /home/vagrant/Code/mysql-read/public/index.php:57
+[22-Apr-2016 08:37:41 UTC] PHP   3. Ldap->checkUser() /home/vagrant/Code/mysql-read/Library/Auth.php:40
+[22-Apr-2016 08:37:41 UTC] PHP   4. ldap_bind() /home/vagrant/Code/mysql-read/Library/Ldap.php:26
+[22-Apr-2016 08:38:35 UTC] PHP Warning:  preg_match() expects at least 2 parameters, 1 given in /home/vagrant/Code/mysql-read/Library/DbMysql.php on line 119
+[22-Apr-2016 08:38:35 UTC] PHP Stack trace:
+[22-Apr-2016 08:38:35 UTC] PHP   1. {main}() /home/vagrant/Code/mysql-read/public/index.php:0
+[22-Apr-2016 08:38:35 UTC] PHP   2. DbMysql->query() /home/vagrant/Code/mysql-read/public/index.php:38
+[22-Apr-2016 08:38:35 UTC] PHP   3. DbMysql->checkSql() /home/vagrant/Code/mysql-read/Library/DbMysql.php:51
+[22-Apr-2016 08:38:35 UTC] PHP   4. preg_match() /home/vagrant/Code/mysql-read/Library/DbMysql.php:119

@@ -116,6 +116,9 @@ class DbMysql  {
                 return "";
             },$ckSql);
         }
+        if(preg_match("/^select/", $sql) && !empty($ckSql)){
+          throw new Exception('select and limit isnot equal in your sql');
+        }
     }
     public function checkDatabase($db){
         return !empty($db) && !in_array($db, array('mysql','information_schema','performance_schema'));

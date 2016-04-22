@@ -1,5 +1,4 @@
 <?php
-
 define('ROOT_PATH',realpath(__DIR__.'/../').'/');
 include ROOT_PATH.'Library/Func.php';
 session_start();
@@ -59,7 +58,7 @@ switch($path){
             if($auth->isLogin()){
                 redirect('/');
             }else{
-                //redirect('/login');
+                redirect('/login');
             }
         }
         break;
