@@ -11,7 +11,6 @@ class Auth{
     private $_cookieObj;
     public  $id='';
     public function __construct(){
-        session_start(array('cookie_lifetime'=>$this->_expire));
         $ucookie = isset($_SESSION[$this->_cookieName])?$_SESSION[$this->_cookieName]:'';
         if($ucookie){
             $this->setData($ucookie);
@@ -27,9 +26,9 @@ class Auth{
      * 并设置cookie
      */
     public function setData($data){
-        if($data && $data['userName']){
+        if($data && $data['id']){
             $this->_data = $data;
-            $this->id = $data['userName'];
+            $this->id = $data['id'];
             $_SESSION[$this->_cookieName]=$data;
         }
     }
@@ -49,11 +48,8 @@ class Auth{
      *获取当前登录名称
      */
     public function getUserName(){
-        if($this->userName){
-            return $this->userName;
-        }
-        if($this->nickName){
-            return $this->nickName;
+        if($this->username){
+            return $this->username;
         }
         if($this->email){
             return $this->email;

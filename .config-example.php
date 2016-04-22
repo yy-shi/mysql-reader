@@ -3,9 +3,10 @@ ini_set('display_errors','on');
 return array(
     'ldap'=>array(
         'account_suffix' => "@chicv.com",
-        'base_dn' => 'dc=example,dc=com',
+        'baseDn' => 'dc=example,dc=com',
         'host'=>'192.168.0.16',
-        'search_dn'=>'dc=example,dc=com',
+        'searchDn'=>'cn=beijing',
+        'loginDn'=>'cn=database',
     ),
     'cookie'=>array(
         'domain'=>'/',
@@ -13,6 +14,7 @@ return array(
     'query'=>array(
         'rowMax'=>200,
         'offsetMax'=>1000,
+        'strLenMax'=>50000,
      ),
      'mysqls'=>array(
          'dev1'=>array(

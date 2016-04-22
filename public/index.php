@@ -2,7 +2,7 @@
 
 define('ROOT_PATH',realpath(__DIR__.'/../').'/');
 include ROOT_PATH.'Library/Func.php';
-
+session_start();
 spl_autoload_register(function ($className) {
     $filePath = ROOT_PATH  .'Library/'.$className. '.php';
     if (file_exists($filePath)){
@@ -22,6 +22,7 @@ $path = empty($path)?'/':$path;
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 
 $auth =new Auth();
+
 if(!$auth->isLogin()){
     if(isAjax()){
         responseJson(array('code'=>403,'msg'=>'登录超时，请重新登录'));
@@ -49,6 +50,7 @@ switch($path){
         ));
       break;
     case "/login":
+     
         if($method=="get"){
             return view('login',array('loginError'=>Flash::get('login-error')));
         }elseif($method=="post"){
@@ -57,8 +59,7 @@ switch($path){
             if($auth->isLogin()){
                 redirect('/');
             }else{
-                flash::add('login-error','用户名或密码错误');   
-                redirect('/login');
+                //redirect('/login');
             }
         }
         break;

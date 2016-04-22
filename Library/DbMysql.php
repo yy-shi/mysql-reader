@@ -17,6 +17,9 @@ class DbMysql  {
          if($config->query->offsetMax){
             $this->_offsetMax = $config->query->offsetMax;
         }
+        if($config->query->strLenMax){
+            $this->_strLenMax = $config->query->strLenMax;
+        }
         if($config->query->rowMax){
             $this->_rowMax = $config->query->rowMax;
         }
@@ -57,6 +60,9 @@ class DbMysql  {
         $ex->closeCursor();
         $slice = array_slice($data,0,$this->_rowMax);
         $strLen = strlen(json_encode($slice));
+        if($strLen > $this->_strLenMax){
+            throw new Exception('tht data is too large,max len is '.$this->_strLenMax,105);
+        }
         return $slice; 
       }
     /**
@@ -87,9 +93,13 @@ class DbMysql  {
             if(preg_match($regular,$sql)){
                 throw new Exception('there has some dangerous opration in your sql,please contact the administrator to exceute this sql',102);
             }else{
-                throw new Exception('miss limit',103);
+                if(preg_match("/^select/", $sql)){
+                    throw new Exception('miss limit',103);
+                }else{
+                    throw new Exception('are u sure ,what u gave to  me is  a sql?',108);
+                }
             }
-        }
+        }//else 为可执行sql
         //匹配每个select查询（包含子查询）,每个查询必须有limit
         $ckRegular = "/select\ ((?!(limit|select)).)+limit\ +(\d+)(?:\ *\,\ *(\d+))?/";
         $ckSql = $sql;
