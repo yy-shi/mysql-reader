@@ -36,11 +36,11 @@ class Ldap{
                     'mail'=> $v['mail'][0],
                 ); 
             }else{
-                flash::add('login-error','你没有权限');   
+                Flash::add('login-error','你没有权限');   
             }
 
         }else{
-            flash::add('login-error','用户名或密码错误');   
+            Flash::add('login-error','用户名或密码错误');   
             return false;
         }
     }
