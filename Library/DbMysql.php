@@ -14,7 +14,7 @@ class DbMysql  {
     public function __construct($conf='', $dbName='') { 
         $config= Configer::single();
         $hosts= $config->mysqls;
-         if($config->query->offsetMax){
+        if($config->query->offsetMax){
             $this->_offsetMax = $config->query->offsetMax;
         }
         if($config->query->strLenMax){
@@ -39,7 +39,7 @@ class DbMysql  {
             $this->_db = new PDO($cdn, $conf['username'], $conf['password'], array(
                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",
                 PDO::ATTR_TIMEOUT => 10,
-              //  PDO::ATTR_PERSISTENT=>true,
+                //  PDO::ATTR_PERSISTENT=>true,
             ));
             //$this->_db->query("set wait_timeout=10;set interactive_timeout=5;");
         }       
@@ -47,7 +47,7 @@ class DbMysql  {
             throw new Exception('数据库连接失败,: ' . $e->getMessage());
         }
     }
-      public function query($sql){
+    public function query($sql){
         $this->checkSql($sql);
         $ex = $this->_db->prepare($sql);
         $ex->execute();
@@ -61,10 +61,10 @@ class DbMysql  {
         $slice = array_slice($data,0,$this->_rowMax);
         $strLen = strlen(json_encode($slice));
         if($strLen > $this->_strLenMax){
-            throw new Exception('tht data is too large,max len is '.$this->_strLenMax,105);
+            throw new Exception('the data is too large,max len is '.$this->_strLenMax,105);
         }
         return $slice; 
-      }
+    }
     /**
      * 把分号的sql语句拆开执行;
      */
@@ -105,7 +105,7 @@ class DbMysql  {
         if(!preg_match($regular,$sql) && !preg_match($regularShow, $sql)){
             $regular = '/[\s\r\n]*(alter|create|update|delete|insert|drop|dump|sleep\(\d+\)|replace|kill)[\s\r\n]+/i';
             if(preg_match($regular,$sql)){
-                throw new Exception('there has some dangerous opration in your sql,please contact the administrator to exceute this sql',102);
+                throw new Exception('there has some dangerous opration in your sql,please contact the administrator to execute this sql',102);
             }else{
                 if(preg_match("/^select/", $sql)){
                     throw new Exception('miss limit',103);
@@ -131,7 +131,7 @@ class DbMysql  {
             },$ckSql);
         }
         if(preg_match("/^select/", $sql) && !empty($ckSql)){
-          throw new Exception('select and limit isnot equal in your sql');
+            throw new Exception('select and limit isnot equal in your sql', 109);
         }
     }
     public function checkDatabase($db){
