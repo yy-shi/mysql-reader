@@ -81,7 +81,9 @@ function getQueryData($this,sql){
                     $('p.result-main').html('');
                 }
                 hljs.highlightBlock( $('pre.result-sql').find('code').get(0));
+                },'json').always(function() {
                 $this.removeAttr('sending');
-                },'json');
+            });
+     ;
             }
 

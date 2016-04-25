@@ -2,6 +2,7 @@
 define('ROOT_PATH',realpath(__DIR__.'/../').'/');
 include ROOT_PATH.'Library/Func.php';
 session_start();
+
 spl_autoload_register(function ($className) {
     $filePath = ROOT_PATH  .'Library/'.$className. '.php';
     if (file_exists($filePath)){
@@ -10,11 +11,12 @@ spl_autoload_register(function ($className) {
         //echo $filePath;
     }
 });
-
+ //echo Configer::config('ldap.host');
 $url = 'http://' . $_SERVER['HTTP_HOST'];
 define('WWW_URL', $url);
 $uri = $_SERVER['REQUEST_URI'];
-$path = current(explode('?',$uri));
+$hosts = parse_url($uri);
+$path = $hosts['path'];
 $path =strtolower($path);
 $path = rtrim($path,'/');
 $path = empty($path)?'/':$path;

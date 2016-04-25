@@ -17,6 +17,21 @@ class Configer {
             return $v;
         }
     }
+
+    public static function config($key){
+        $keys = explode('.',$key);
+        $obj = self::single();
+        $return =  $obj->toArray();
+        $k  = current($keys);
+        do{
+            if($key && isset($return[$k])){
+                $return = $return[$k];
+            }else{
+                return null;
+            }
+        }while($k = next($keys));
+        return $return;
+    }
     public static function single() {
         static $sington;
         if (is_null($sington)) {

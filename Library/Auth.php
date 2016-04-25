@@ -5,15 +5,13 @@
  */
 class Auth{
 
-    private $_cookieName='cv_udata';
-    private $_expire=600;
+    const U_NAME='cv_udata';
     private $_data = array();
-    private $_cookieObj;
     public  $id='';
     public function __construct(){
-        $ucookie = isset($_SESSION[$this->_cookieName])?$_SESSION[$this->_cookieName]:'';
-        if($ucookie){
-            $this->setData($ucookie);
+        $uSession = isset($_SESSION[self::U_NAME])?$_SESSION[self::U_NAME]:'';
+        if($uSession){
+            $this->setData($uSession);
         }
     }
     public function __get($key){
@@ -23,13 +21,13 @@ class Auth{
     }
     /**
      * 设置对象数据
-     * 并设置cookie
+     * 并设置session
      */
     public function setData($data){
         if($data && $data['id']){
             $this->_data = $data;
             $this->id = $data['id'];
-            $_SESSION[$this->_cookieName]=$data;
+            $_SESSION[self::U_NAME]=$data;
         }
     }
     public function isLogin(){

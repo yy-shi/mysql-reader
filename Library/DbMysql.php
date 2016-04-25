@@ -71,10 +71,24 @@ class DbMysql  {
     public function queryMany($sql){
         $result = array();
         $i = 0;
+        $regular = "/(['\"])[\d\D]+\\1/";
+        $this->mcSql = array();
+        $sql = preg_replace_callback($regular,function($match){
+            $this->mcSql[] = $match[0];
+            return "%s";
+        },$sql);
+        $mcSql = $this->mcSql;
         foreach(explode(';',$sql) as $key => $singleSql){
             if($i >2) break;
             $singleSql = trim($singleSql);
             if(empty($singleSql)) continue;
+            $params = array($singleSql);
+            $strCount = substr_count($singleSql,'%s');
+            if($strCount){
+                $params = array_merge($params, array_slice($mcSql,0,$strCount));
+                $singleSql = call_user_func_array('sprintf',$params);
+                $mcSql = array_slice($mcSql,$strCount);
+            }
             $result[] = $this->query($singleSql);
             $i++;
         }
