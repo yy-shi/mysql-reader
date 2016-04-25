@@ -71,7 +71,7 @@ class DbMysql  {
     public function queryMany($sql){
         $result = array();
         $i = 0;
-        $regular = "/(['\"])[\d\D]+\\1/";
+        $regular = "/(['\"])((?!['\"]).)+\\1/";
         $this->mcSql = array();
         $sql = preg_replace_callback($regular,function($match){
             $this->mcSql[] = $match[0];
@@ -100,7 +100,7 @@ class DbMysql  {
      *只支持show 和 符合行数限制要求的select语句
      */
     public function checkSql($sql){
-        $regular = "/^select\ [\d\D]+\ +limit\ +\d+/i";
+        $regular = "/^select\ ((?!\s*sleep\s*\().)+\s+limit\s+\d+/i";
         $regularShow = "/^(show|explain|set) /i";
         if(!preg_match($regular,$sql) && !preg_match($regularShow, $sql)){
             $regular = '/[\s\r\n]*(alter|create|update|delete|insert|drop|dump|sleep\(\d+\)|replace|kill)[\s\r\n]+/i';
