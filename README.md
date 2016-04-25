@@ -26,8 +26,9 @@ sql检测策略
 
 * config.php
 * cp .config-example.php config.php
+* mkdir logs && chmod 777 logs
 
-feuture
+future
 ==============
 
 * sql检测策略持续优化
