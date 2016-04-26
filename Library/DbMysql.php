@@ -81,6 +81,7 @@ class DbMysql  {
         foreach(explode(';',$sql) as $key => $singleSql){
             if($i >2) break;
             $singleSql = trim($singleSql);
+            $singleSql = str_replace("\n"," ", $singleSql);
             if(empty($singleSql)) continue;
             $params = array($singleSql);
             $strCount = substr_count($singleSql,'%s');
