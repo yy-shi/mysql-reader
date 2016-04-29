@@ -108,7 +108,7 @@ class DbMysql  {
             if(preg_match($regular,$sql)){
                 throw new Exception('there has some dangerous opration in your sql,please contact the administrator to execute this sql',102);
             }else{
-                if(preg_match("/^select/", $sql)){
+                if(preg_match("/^select/i", $sql)){
                     throw new Exception('miss limit',103);
                 }else{
                     throw new Exception('are u sure ,what u gave to  me is  a sql?',108);
@@ -116,7 +116,7 @@ class DbMysql  {
             }
         }//else 为可执行sql
         //匹配每个select查询（包含子查询）,每个查询必须有limit
-        $ckRegular = "/select\ ((?!(limit|select)).)+limit\ +(\d+)(?:\ *\,\ *(\d+))?/";
+        $ckRegular = "/select\ ((?!(limit|select)).)+limit\ +(\d+)(?:\ *\,\ *(\d+))?/i";
         $ckSql = $sql;
         while(preg_match($ckRegular,$ckSql)){
             $ckSql = preg_replace_callback($ckRegular,function($match){
@@ -131,7 +131,7 @@ class DbMysql  {
                 return "";
             },$ckSql);
         }
-        if(preg_match("/^select/", $sql) && !empty($ckSql)){
+        if(preg_match("/^select/i", $sql) && !empty($ckSql)){
             throw new Exception('select and limit isnot equal in your sql', 109);
         }
     }
