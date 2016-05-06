@@ -1,4 +1,5 @@
-<div class="index-box">
+<div class="index-box clearfix">
+    <div class="col-sm-10">
     <form class="form-horizontal" target="_blank" id="index-form" action="/query" method="post">
             <input type="hidden" name="export_csv" value="0">
          <div class="form-group">
@@ -32,6 +33,7 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="button" id="query_btn" class="btn btn-default">查询</button>
                 <button type="button" id="export_csv_btn" class="btn btn-default">导出csv</button>
+                <button type="button" id="save_sql_btn" class="btn btn-default">保存sql</button>
             <p class="action-btns">
   <button sql="SHOW PROCESSLIST;" type="button"id="show-processlist" class="btn btn-primary">查看当前进程</button>
   <button sql="SHOW VARIABLES;" id="show-variables"type="button" class="btn btn-primary">查看设置</button>
@@ -42,6 +44,16 @@
             </div>
         </div>
     </form>
+</div>
+<div class="col-sm-2">
+<ul class="nav nav-tabs">
+  <li role="history" class="active"><a href="#">历史记录</a></li>
+  <li role="save"><a href="#">已保存</a></li>
+</ul>
+<ul class="list-group  history-box" id="sql-group-ul">
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+</div>
 </div>
 
 <div class="result-box clearfix" style="display:none">

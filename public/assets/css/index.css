@@ -18,4 +18,6 @@
 .result-main tr>td:last-child{padding-left:30px;}
 .result-main tr>td:last-child{padding-right:30px;}
 .action-btns{margin-top:20px;}
+.history-box{height:300px; overflow-y:auto;overflow-x:hidden; border-left:1px #e5e5e5 solid;}
+.history-box li {cursor:pointer;}
 

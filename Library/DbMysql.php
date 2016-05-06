@@ -41,8 +41,9 @@ class DbMysql  {
                 PDO::ATTR_TIMEOUT => 10,
                 //  PDO::ATTR_PERSISTENT=>true,
             ));
+            $this->_db->query("set SQL_MODE=''");
             //$this->_db->query("set wait_timeout=10;set interactive_timeout=5;");
-        }       
+        }
         catch(PDOException $e) {
             throw new Exception('数据库连接失败,: ' . $e->getMessage());
         }
