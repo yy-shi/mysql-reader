@@ -94,11 +94,19 @@ switch($path){
             $msg = $auth->getUsername().'|sql:'.$sql.'|result:'.round(($etime-$stime),3); 
             unset($params['query']);
             Log::single('query')->add($msg, $params);
-            responseJson(array(
-                'code'=>200,
-                'msg'=>'ok',
-                'data'=>$data,    
-            ));
+            if(isAjax()){
+                responseJson(array(
+                    'code'=>200,
+                    'msg'=>'ok',
+                    'data'=>$data,    
+                ));
+            }else{
+                if(!is_array($data)){
+                    $data = array('no data');
+                }
+                exportCsv('query-result',array_keys($data[0]),$data);
+                //导出csv
+            }
         }catch(Exception $e){
             $msg = $auth->getUsername().'|sql:'.$sql.'|result:refused|error:'.$e->getMessage();; 
             Log::single('query')->add($msg, $params);

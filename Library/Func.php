@@ -44,3 +44,33 @@ function getPost($key){
     return isset($_POST[$key])?$_POST[$key]:'';
 }
 
+
+function exportcsv($filename,$header,$data){
+    $filename = $filename.date('YmdHis').rand(1000,9999).'.csv';
+    header("Cache-Control: public");
+    header("Pragma: public");
+    header("Content-type:application/vnd.ms-excel");
+    header("Content-Disposition:attachment;filename=".$filename);
+    header('Content-Type:APPLICATION/OCTET-STREAM');
+    $output = fopen('php://output', 'w');
+    $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+    if(strpos($agent, 'windows nt')) {
+        $header = array_map(function($value){
+            return iconv("utf-8",'gbk',$value);
+        }, $header);
+    }
+    fputcsv($output, $header);
+    if(!empty($data)){
+        foreach($data as $key => $val){
+            if(strpos($agent, 'windows nt')) {
+                $val = array_map(function($value){
+                    return iconv("utf-8",'gbk',$value);
+                }, $val);
+            }
+            fputcsv($output, (array)$val);
+        }
+    }
+}
+
+
+

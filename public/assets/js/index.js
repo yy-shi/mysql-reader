@@ -1,9 +1,10 @@
 $(document).ready(function(){
-    $('#index-form').submit(function(){
-        var $this = $(this);
-        var sql = $this.find('textarea[name=sql]').val();
-        getQueryData($this, sql);
-        return false;
+    $('#query_btn').click(function(){
+        var $form = $('#index-form');
+        var sql = $form.find('textarea[name=query]').val();
+        if(sql){
+            getQueryData($form, sql);
+        }    
     });
     $('#host-selector').change(function(){
         var host = $(this).find('select[name=host]').val();
@@ -18,11 +19,19 @@ $(document).ready(function(){
             })
         },'json');   
     });;
+    $('#export_csv_btn').click(function(){
+        var tform = $('#index-form');
+        tform.find("input[name=export_csv]").val(1);
+        var sql = tform.find('textarea[name=query]').val();
+        if(sql){
+            tform.submit();
+        }
+    });
     $('.action-btns button').click(function(){
         var sql = $(this).attr('sql');
         var tform = $('#index-form');
         if(sql.match(/%s/)){
-            var inputSql = tform.find('textarea[name=sql]').val();
+            var inputSql = tform.find('textarea[name=query]').val();
             if(inputSql){
                 sql = sql.replace("%s", inputSql);
             }else{
