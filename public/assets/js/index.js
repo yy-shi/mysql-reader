@@ -111,7 +111,7 @@ function getQueryData($this,sql){
         var sqlHistory = getLocalStorage();
             sqlHistory.history=uniqueAndPush(sqlHistory.history,sql);
             localStorage.sqlHistory=JSON.stringify(sqlHistory);
-            $('ul.nav-tabs li[role=save]').trigger('click');
+            $('ul.nav-tabs li[role=history]').trigger('click');
             $('p.result-title').removeClass('alert-warning').addClass('alert-success');
             $('p.result-title').html('执行成功,结果集行数('+data.data.length+')');
                 renderQueryResult(data.data);
