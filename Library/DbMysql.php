@@ -4,14 +4,14 @@
  * sql检查， 只允许select和show
  * select时必须有limit参数
  * 数据库选择 不允许选择mysql
- *  
+ *
  */
 class DbMysql  {
-    private $_db = null; 
+    private $_db = null;
     private $_rowMax = 100;
     private $_offsetMax = 5000;
     private $_strLenMax = 50000;
-    public function __construct($conf='', $dbName='') { 
+    public function __construct($conf='', $dbName='') {
         $config= Configer::single();
         $hosts= $config->mysqls;
         if($config->query->offsetMax){
@@ -64,7 +64,7 @@ class DbMysql  {
         if($strLen > $this->_strLenMax){
             throw new Exception('the data is too large,max len is '.$this->_strLenMax,105);
         }
-        return $slice; 
+        return $slice;
     }
     /**
      * 把分号的sql语句拆开执行;
@@ -82,7 +82,7 @@ class DbMysql  {
         foreach(explode(';',$sql) as $key => $singleSql){
             if($i >2) break;
             $singleSql = trim($singleSql);
-            $singleSql = str_replace("\n"," ", $singleSql);
+ 			$singleSql = strtr($singleSql,array("\r\n"=>" ","\n"=>" "));
             if(empty($singleSql)) continue;
             $params = array($singleSql);
             $strCount = substr_count($singleSql,'%s');
