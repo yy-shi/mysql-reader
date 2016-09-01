@@ -99,6 +99,7 @@ function getQueryData($this,sql){
     if($this.attr('sending')){
         return false;
     }
+    var inputSql = $this.find('textarea[name=query]').val();
     $this.attr('sending',1);
     $.post('/query',{query:sql,host:host,dbname:dbName},function(data){
         if(data.code==403){
@@ -109,7 +110,9 @@ function getQueryData($this,sql){
         $('pre.result-sql').find('code').html(sql);
         if(data.code===200){
         var sqlHistory = getLocalStorage();
-            sqlHistory.history=uniqueAndPush(sqlHistory.history,sql);
+            if(inputSql){
+                sqlHistory.history=uniqueAndPush(sqlHistory.history,inputSql);
+            }
             localStorage.sqlHistory=JSON.stringify(sqlHistory);
             $('ul.nav-tabs li[role=history]').trigger('click');
             $('p.result-title').removeClass('alert-warning').addClass('alert-success');

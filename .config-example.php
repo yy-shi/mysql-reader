@@ -10,7 +10,8 @@ return array(
     ),
     'cookie'=>array(
         'domain'=>'/',
-    ),
+	),
+	'rootUser'=>'root',
     'query'=>array(
         'rowMax'=>200,
         'offsetMax'=>1000,

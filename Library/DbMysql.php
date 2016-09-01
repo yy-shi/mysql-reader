@@ -11,6 +11,7 @@ class DbMysql  {
     private $_rowMax = 100;
     private $_offsetMax = 5000;
     private $_strLenMax = 50000;
+    private $_checkLimit = true;
     public function __construct($conf='', $dbName='') {
         $config= Configer::single();
         $hosts= $config->mysqls;
@@ -29,7 +30,10 @@ class DbMysql  {
             $conf = $hosts->$conf;
         }
         $this->setDb($conf, $dbName);
-    }
+	}
+	public function setRoot($isRoot=false){
+		$this->_checkLimit= !$isRoot;
+	}
     private function setDb($conf, $dbName) {
         try {
             $cdn  = "mysql:host=" . $conf['host'] . ";port=" . $conf['port'] . ";";
@@ -58,13 +62,16 @@ class DbMysql  {
         }
         $ex->setFetchMode(2);
         $data = $ex->fetchAll();
-        $ex->closeCursor();
-        $slice = array_slice($data,0,$this->_rowMax);
-        $strLen = strlen(json_encode($slice));
-        if($strLen > $this->_strLenMax){
-            throw new Exception('the data is too large,max len is '.$this->_strLenMax,105);
-        }
-        return $slice;
+		$ex->closeCursor();
+		if($this->_checkLimit){
+			$slice = array_slice($data,0,$this->_rowMax);
+			$strLen = strlen(json_encode($slice));
+			if($strLen > $this->_strLenMax){
+				throw new Exception('the data is too large,max len is '.$this->_strLenMax,105);
+			}
+			return $slice;
+		}
+		return $data;
     }
     /**
      * 把分号的sql语句拆开执行;
@@ -79,7 +86,7 @@ class DbMysql  {
             return "%s";
         },$sql);
         $mcSql = $this->mcSql;
-        foreach(explode(';',$sql) as $key => $singleSql){
+        foreach(explode(';',$sql) as  $singleSql){
             if($i >2) break;
             $singleSql = trim($singleSql);
  			$singleSql = strtr($singleSql,array("\r\n"=>" ","\n"=>" "));
@@ -109,14 +116,20 @@ class DbMysql  {
             if(preg_match($regular,$sql)){
                 throw new Exception('there has some dangerous opration in your sql,please contact the administrator to execute this sql',102);
             }else{
-                if(preg_match("/^select/i", $sql)){
+				if(preg_match("/^select/i", $sql)){
+					if($this->_checkLimit==false){
+						return true;
+					}
                     throw new Exception('miss limit',103);
                 }else{
                     throw new Exception('are u sure ,what u gave to  me is  a sql?',108);
                 }
             }
         }//else 为可执行sql
-        //匹配每个select查询（包含子查询）,每个查询必须有limit
+		//匹配每个select查询（包含子查询）,每个查询必须有limit
+		if($this->_checkLimit==false){
+			return true;
+		}
         $ckRegular = "/select\ ((?!(limit|select)).)+limit\ +(\d+)(?:\ *\,\ *(\d+))?/i";
         $ckSql = $sql;
         while(preg_match($ckRegular,$ckSql)){

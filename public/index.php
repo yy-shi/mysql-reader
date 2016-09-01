@@ -14,16 +14,16 @@ spl_autoload_register(function ($className) {
  //echo Configer::config('ldap.host');
 $url = 'http://' . $_SERVER['HTTP_HOST'];
 define('WWW_URL', $url);
-$uri = $_SERVER['REQUEST_URI'];
-$hosts = parse_url($uri);
-$path = $hosts['path'];
-$path =strtolower($path);
-$path = rtrim($path,'/');
-$path = empty($path)?'/':$path;
+$uri    = $_SERVER['REQUEST_URI'];
+$hosts  = parse_url($uri);
+$path   = $hosts['path'];
+$path   = strtolower($path);
+$path   = rtrim($path,'/');
+$path   = empty($path)?'/':$path;
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 
-$auth =new Auth();
 
+$auth =new Auth();
 if(!$auth->isLogin()){
     if(isAjax()){
         responseJson(array('code'=>403,'msg'=>'登录超时，请重新登录'));
@@ -35,15 +35,15 @@ if(!$auth->isLogin()){
 }
 switch($path){
     case "/":
-        $mysqlHost = Configer::single()->mysqls;
-        $db = new DbMysql();
-        $databases = $db->query('show databases;');
+		$mysqlHost = Configer::single()->mysqls;
+		$db = new DbMysql();
+		$databases = $db->query('show databases;');
         foreach($databases as $k=>$d){
             if(!$db->checkDatabase($d['Database'])){
                 unset($databases[$k]);
             }
         }
-        $rowMax = Configer::single()->query->rowMax; 
+        $rowMax = Configer::single()->query->rowMax;
         return view('index',array(
             'mysqlHost'=>$mysqlHost,
             'databases'=>$databases,
@@ -51,7 +51,7 @@ switch($path){
         ));
       break;
     case "/login":
-     
+
         if($method=="get"){
             return view('login',array('loginError'=>Flash::get('login-error')));
         }elseif($method=="post"){
@@ -64,7 +64,7 @@ switch($path){
             }
         }
         break;
-    case "/getdb":  
+    case "/getdb":
         if($method == "get"){
             return ;
         }
@@ -86,19 +86,22 @@ switch($path){
         $host = getPost('host');
         $dbName = getPost('dbname');
         $db = new DbMysql($host, $dbName);
-        $params = $_REQUEST;
+		if(in_array($auth->id,explode(',',Configer::single()->rootUser))){
+			$db->setRoot(true);
+		}
+		$params = $_REQUEST;
         try{
             $stime = microtime(true);
             $data= $db->queryMany($sql);
             $etime = microtime(true);
-            $msg = $auth->getUsername().'|sql:'.$sql.'|result:'.round(($etime-$stime),3); 
+            $msg = $auth->getUsername().'|sql:'.$sql.'|result:'.round(($etime-$stime),3);
             unset($params['query']);
             Log::single('query')->add($msg, $params);
             if(isAjax()){
                 responseJson(array(
                     'code'=>200,
                     'msg'=>'ok',
-                    'data'=>$data,    
+                    'data'=>$data,
                 ));
             }else{
                 if(!is_array($data)){
@@ -108,7 +111,7 @@ switch($path){
                 //导出csv
             }
         }catch(Exception $e){
-            $msg = $auth->getUsername().'|sql:'.$sql.'|result:refused|error:'.$e->getMessage();; 
+            $msg = $auth->getUsername().'|sql:'.$sql.'|result:refused|error:'.$e->getMessage();;
             Log::single('query')->add($msg, $params);
             responseJson(array(
                 'code'=>$e->getCode(),
