@@ -108,7 +108,7 @@ class DbMysql  {
      *检测select的limit大小
      *只支持show 和 符合行数限制要求的select语句
      */
-    public function checkSql($sql){
+    public function checkSql(&$sql){
         $regular = "/^select\ ((?!\s*sleep\s*\().)+\s+limit\s+\d+/i";
         $regularShow = "/^(show|explain|set) /i";
         if(!preg_match($regular,$sql) && !preg_match($regularShow, $sql)){
@@ -121,7 +121,7 @@ class DbMysql  {
 						return true;
                     }else{
                         $sql = rtrim($sql,';');
-                        $sql .= " limit 10";
+                        $sql .= " limit 0, 10";
                     }
                     //throw new Exception('miss limit',103);
                 }else{
