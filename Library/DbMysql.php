@@ -119,8 +119,10 @@ class DbMysql  {
 				if(preg_match("/^select/i", $sql)){
 					if($this->_checkLimit==false){
 						return true;
-					}
-                    throw new Exception('miss limit',103);
+                    }else{
+                        $sql .= " limit 10";
+                    }
+                    //throw new Exception('miss limit',103);
                 }else{
                     throw new Exception('are u sure ,what u gave to  me is  a sql?',108);
                 }
