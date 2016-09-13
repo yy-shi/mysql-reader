@@ -120,6 +120,7 @@ class DbMysql  {
 					if($this->_checkLimit==false){
 						return true;
                     }else{
+                        $sql = rtrim($sql,';');
                         $sql .= " limit 10";
                     }
                     //throw new Exception('miss limit',103);
