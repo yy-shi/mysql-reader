@@ -3,6 +3,7 @@ define('ROOT_PATH',realpath(__DIR__.'/../').'/');
 include ROOT_PATH.'Library/Func.php';
 session_start();
 
+ini_set('memory_limit', -1);
 spl_autoload_register(function ($className) {
     $filePath = ROOT_PATH  .'Library/'.$className. '.php';
     if (file_exists($filePath)){
