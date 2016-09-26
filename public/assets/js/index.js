@@ -34,7 +34,7 @@ $('#query_btn').click(function(){
         }    
     });
     $('#host-selector').change(function(){
-        var host = $(this).find('select[name=host]').val();
+        var host = $(this).val();
         $.post('/getdb',{host:host},function(json){
             if(json.code==403){
                 alert(json.msg);
