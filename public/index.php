@@ -102,7 +102,9 @@ switch($path){
                 responseJson(array(
                     'code'=>200,
                     'msg'=>'ok',
-                    'data'=>$data,
+                    'data'=>array_map(function($v){
+			    return array_map(htmlspecialchars,$v);
+		    },$data),
                 ));
             }else{
                 if(!is_array($data)){
