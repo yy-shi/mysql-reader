@@ -103,7 +103,7 @@ switch($path){
                     'code'=>200,
                     'msg'=>'ok',
                     'data'=>array_map(function($v){
-			    return array_map(htmlspecialchars,$v);
+			    return array_map('htmlspecialchars',$v);
 		    },$data),
                 ));
             }else{
