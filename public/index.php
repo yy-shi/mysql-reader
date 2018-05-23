@@ -38,7 +38,7 @@ switch($path){
     case "/":
 		$mysqlHost = Configer::single()->mysqls;
 		$db = new DbMysql();
-		$databases = $db->query('show databases;');
+		$databases = $db->query('show databases;')[1];
         foreach($databases as $k=>$d){
             if(!$db->checkDatabase($d['Database'])){
                 unset($databases[$k]);
@@ -71,7 +71,7 @@ switch($path){
         }
         $host = getPost('host');
         $db = new DbMysql($host);
-        $databases = $db->query('show databases;');
+        $databases = $db->query('show databases;')[1];
         foreach($databases as $k=>$d){
             if(!$db->checkDatabase($d['Database'])){
                 unset($databases[$k]);
@@ -102,15 +102,18 @@ switch($path){
                 responseJson(array(
                     'code'=>200,
                     'msg'=>'ok',
-                    'data'=>array_map(function($v){
-			    return array_map('htmlspecialchars',$v);
-		    },$data),
+                    'data'=> [
+                        array_map('htmlspecialchars',$data[0]),
+                        array_map(function($v){
+                            return array_map('htmlspecialchars',$v);
+                        },$data[1])
+                    ],
                 ));
             }else{
-                if(!is_array($data)){
+                if(!is_array($data[1])){
                     $data = array('no data');
                 }
-                exportCsv('query-result',array_keys($data[0]),$data);
+                exportCsv('query-result',$data[0],$data[1]);
                 //导出csv
             }
         }catch(Exception $e){

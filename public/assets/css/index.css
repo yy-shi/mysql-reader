@@ -8,16 +8,16 @@
 .index-box{
   padding-top:20px;
 }
-.result-title,.result-sql{width:95%; margin:0 auto; margin-bottom:10px;}
+.result-title,.result-sql{/*width:95%;*/ margin:0 auto; margin-bottom:10px;}
 .width200{
     width:200px;
 }
 .result-main{width:100%;}
-.result-main thead tr{ background:#22a812;}
+.result-main thead tr{ background:#000000;color:#FFF}
 .result-main tr>th:first-child{padding-left:30px;}
 .result-main tr>td:last-child{padding-left:30px;}
 .result-main tr>td:last-child{padding-right:30px;}
 .action-btns{margin-top:20px;}
-.history-box{height:300px; overflow-y:auto;overflow-x:hidden; border-left:1px #e5e5e5 solid;}
+/*.history-box{height:300px; overflow-y:auto;overflow-x:hidden; border-left:1px #e5e5e5 solid;}*/
 .history-box li {cursor:pointer;}
 

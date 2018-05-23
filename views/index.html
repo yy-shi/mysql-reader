@@ -1,74 +1,72 @@
 <div class="index-box clearfix">
-    <div class="col-sm-10">
-    <form class="form-horizontal" target="_blank" id="index-form" action="/query" method="post">
+    <div class="col-sm-12">
+        <form class="form-horizontal" target="_blank" id="index-form" action="/query" method="post">
             <input type="hidden" name="export_csv" value="0">
-         <div class="form-group">
-            <label for="inputsql" class="col-sm-2 control-label">选择实例</label>
-            <div class="col-sm-10">
-                <select id="host-selector" name="host"class="form-control width200">
-                    <?php foreach($mysqlHost as $k=>$h){?>
-                    <option value="<?php echo $k;?>"><?php echo $h['name'];?></option>
-                    <?php }?>
-                </select>
+            <div class="form-group">
+                <label for="inputsql" class="col-sm-1 control-label">选择实例</label>
+                <div class="col-sm-3">
+                    <select id="host-selector" name="host" class="form-control width200">
+                        <?php foreach($mysqlHost as $k=>$h){?>
+                        <option value="<?php echo $k;?>"><?php echo $h['name'];?></option>
+                        <?php }?>
+                    </select>
+                </div>
+                <label for="inputsql" class="col-sm-2 control-label">选择数据库</label>
+                <div class="col-sm-4">
+                    <select id="db-selector" name="dbname" class="form-control width200">
+                        <?php foreach($databases as $db){?>
+                        <option value="<?php echo $db['Database'];?>"><?php echo $db['Database'];?></option>
+                        <?php }?>
+                    </select>
+                </div>
             </div>
-        </div>
-  <div class="form-group">
-            <label for="inputsql" class="col-sm-2 control-label">选择数据库</label>
-            <div class="col-sm-10">
-                <select id="db-selector" name="dbname"class="form-control width200">
-                     <?php foreach($databases as $db){?>
-                     <option value="<?php echo $db['Database'];?>"><?php echo $db['Database'];?></option>
-                    <?php }?>
-                </select>
-            </div>
-        </div>
 
- <div class="form-group">
-            <label for="inputsql" class="col-sm-2 control-label">SQL</label>
-            <div class="col-sm-10">
-                <textarea name="query"rows=5 class="form-control"placeholder="只支持select和show语句,select最大行数<?php echo $rowMax;?>"></textarea>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs">
+                        <li role="sql" class="active"><a href="#sql">SQL</a></li>
+                        <li role="history"><a href="#">历史记录</a></li>
+                        <li role="save"><a href="#">已保存</a></li>
+                    </ul>
+                    <ul class="list-group  history-box" id="sql-group-ul">
+                        <li class="list-group-item"></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="sql">
+                            <textarea name="query" rows=5 class="form-control" placeholder="只支持select和show语句,select最大行数<?php echo $rowMax;?>"></textarea>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="button" id="query_btn" class="btn btn-default">查询</button>
-                <button type="button" id="export_csv_btn" class="btn btn-default">导出csv</button>
-                <button type="button" id="save_sql_btn" class="btn btn-default">保存sql</button>
-            <p class="action-btns">
-  <button sql="SHOW PROCESSLIST;" type="button"id="show-processlist" class="btn btn-primary">查看当前进程</button>
-  <button sql="SHOW VARIABLES;" id="show-variables"type="button" class="btn btn-primary">查看设置</button>
-  <button sql="SHOW STATUS;" id="show-status" type="button" class="btn btn-primary">查看置状态</button>
-  <button sql="explain %s;" id="show-explain" type="button" class="btn btn-primary">show explain</button>
-  <button sql="set profiling=1;%s;show profile for query 1;" id="show-query-profile" type="button" class="btn btn-primary">show query profile</button>
-</p>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <button type="button" id="query_btn" class="btn btn-info">查询</button>
+                    <button type="button" id="export_csv_btn" class="btn btn-default">导出csv</button>
+                    <button type="button" id="save_sql_btn" class="btn btn-default">保存sql</button>
+                    <button sql="SHOW PROCESSLIST;" type="button" id="show-processlist" class="btn btn-primary">查看当前进程</button>
+                    <button sql="SHOW VARIABLES;" id="show-variables" type="button" class="btn btn-primary">查看设置</button>
+                    <button sql="SHOW STATUS;" id="show-status" type="button" class="btn btn-primary">查看置状态</button>
+                    <button sql="explain %s;" id="show-explain" type="button" class="btn btn-primary">show explain</button>
+                    <button sql="set profiling=1;%s;show profile for query 1;"  id="show-query-profile" type="button" class="btn btn-primary">
+                        show query profile
+                    </button>
+                </div>
             </div>
-        </div>
-    </form>
-</div>
-<div class="col-sm-2">
-<ul class="nav nav-tabs">
-  <li role="history" class="active"><a href="#">历史记录</a></li>
-  <li role="save"><a href="#">已保存</a></li>
-</ul>
-<ul class="list-group  history-box" id="sql-group-ul">
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-</div>
+        </form>
+    </div>
 </div>
 
-<div class="result-box clearfix" style="display:none">
-    <p class="result-title alert-success">
-        执行成功
-    </p>
+<div class="result-box clearfix" style="display: none">
+    <span class="result-title alert-success">执行成功</span>
     <pre class="result-sql">
         <code class="sql"> select * from my.mye where ssas="ss" limit 1;</code>
     </pre>
-    <div class="result-main"> 
+    <div class="result-main">
         <table class="table table-striped">
             <thead>
-           </thead>
+            </thead>
             <tbody>
-           </tbody>
+            </tbody>
         </table>
     </div>
 </div>
