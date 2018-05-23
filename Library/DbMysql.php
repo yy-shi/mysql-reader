@@ -169,7 +169,7 @@ class DbMysql
     public function checkLimit(&$sql){
         if ($this->_checkLimit === false) return true;
         //是select语句，但是没有limit
-        if (preg_match("/^select/i", $sql) && !preg_match('/\s+limit\s+\d+(,\d+)?[\s\;]*?&/',$sql)) {
+        if (preg_match("/^select/i", $sql) && !preg_match('/\s+limit\s+\d+(,\d+)?[\s\;]*?$/',$sql)) {
             $sql = rtrim($sql, ';');
             $sql .= " limit 0, 10";
         }
