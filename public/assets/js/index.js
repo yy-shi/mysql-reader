@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  /*禁用因为横向滚动造成的mac下触发返回的误操作*/
+  history.pushState(null, null, location.href);
+  window.onpopstate = function () {
+    history.go(1);
+  };
+  
   renderHistory();
   $('ul.nav-tabs li').click(function() {
     $(this).siblings().removeClass('active');
