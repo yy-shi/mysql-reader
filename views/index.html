@@ -43,13 +43,15 @@
                     <button type="button" id="query_btn" class="btn btn-info">查询</button>
                     <button type="button" id="export_csv_btn" class="btn btn-default">导出csv</button>
                     <button type="button" id="save_sql_btn" class="btn btn-default">保存sql</button>
-                    <button sql="SHOW PROCESSLIST;" type="button" id="show-processlist" class="btn btn-primary">查看当前进程</button>
-                    <button sql="SHOW VARIABLES;" id="show-variables" type="button" class="btn btn-primary">查看设置</button>
-                    <button sql="SHOW STATUS;" id="show-status" type="button" class="btn btn-primary">查看置状态</button>
-                    <button sql="explain %s;" id="show-explain" type="button" class="btn btn-primary">show explain</button>
-                    <button sql="set profiling=1;%s;show profile for query 1;"  id="show-query-profile" type="button" class="btn btn-primary">
-                        show query profile
-                    </button>
+                    <div class="action-btns" style="display:inline">
+	                    <button sql="SHOW PROCESSLIST;" type="button" id="show-processlist" class="btn btn-primary">查看当前进程</button>
+	                    <button sql="SHOW VARIABLES;" id="show-variables" type="button" class="btn btn-primary">查看设置</button>
+	                    <button sql="SHOW STATUS;" id="show-status" type="button" class="btn btn-primary">查看置状态</button>
+	                    <button sql="explain %s;" id="show-explain" type="button" class="btn btn-primary">show explain</button>
+	                    <button sql="set profiling=1;%s;show profile for query 1;"  id="show-query-profile" type="button" class="btn btn-primary">
+	                        show query profile
+	                    </button>
+                    </div>
                 </div>
             </div>
         </form>
