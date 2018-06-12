@@ -57,7 +57,7 @@ switch($path){
             return view('login',array('loginError'=>Flash::get('login-error')));
         }elseif($method=="post"){
             $auth =new Auth();
-            $auth->login(getPost('username'), getPost('password'));
+            $auth->login(getPost('username'), getPost('password'),getPost('zone'));
             if($auth->isLogin()){
                 redirect('/');
             }else{

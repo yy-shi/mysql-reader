@@ -33,9 +33,9 @@ class Auth{
     public function isLogin(){
         return !empty($this->id);
     }
-    public function login($username, $password){
+    public function login($username, $password,$zone){
         $ldap = new Ldap();
-        $data = $ldap->checkUser($username, $password);
+        $data = $ldap->checkUser($username, $password,$zone);
         if(empty($data)){
             return false;
         }

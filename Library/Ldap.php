@@ -22,11 +22,11 @@ class Ldap{
         ldap_set_option($this->_ldap,LDAP_OPT_REFERRALS,0);
     }
 
-    public function checkUser($user, $password){
-        $bind= @ldap_bind($this->_ldap,'uid='.$user.','.$this->_loginDn.','.$this->_baseDn,$password);
+    public function checkUser($user, $password,$zone){
+        $bind= @ldap_bind($this->_ldap,'uid='.$user.',ou='.$zone.','.$this->_loginDn.','.$this->_baseDn,$password);
         if($bind)  
         {
-            if($this->checkLimit($user)){
+            if($this->checkLimit($user,$zone)){
                 $result= ldap_search($this->_ldap,$this->_baseDn,"uid=" . $user,array('mail','cn'));  
                 $retData = ldap_get_entries($this->_ldap, $result);  
                 $v= $retData[0];
@@ -44,12 +44,12 @@ class Ldap{
             return false;
         }
     }
-    public function checkLimit($uid){
+    public function checkLimit($uid,$zone){
         $result= ldap_search($this->_ldap,$this->_baseDn,$this->_searchDn,array('member','cn'));  
         $retData = ldap_get_entries($this->_ldap, $result);
         if(isset($retData[0])){
             $data = $retData[0];
-            $user = 'uid='.$uid.','.$this->_loginDn.','.$this->_baseDn;
+            $user = 'uid='.$uid.',ou='.$zone.','.$this->_loginDn.','.$this->_baseDn;
             return in_array($user, $data['member']);
         }
     }
